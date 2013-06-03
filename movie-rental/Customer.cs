@@ -26,7 +26,7 @@ namespace MovieRental
         {
             var totalAmount = 0d;
             var frequentRenterPoints = 0;
-            var result = "Rental Record for" + Name + "\n";
+            var result = "Rental Record for " + Name + "\n";
             var e = rentals.GetEnumerator();
             while (e.MoveNext())
             {
