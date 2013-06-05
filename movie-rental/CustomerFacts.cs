@@ -8,10 +8,7 @@ namespace MovieRental
 {
     public class CustomerFacts
     {
-        private static readonly Regex Patten = new Regex(
-@"Rental Record for (?<name>\w*)
-(?:\t(?<title>.*)\t(?<sigleAmount>.*)\n)*Amount owed is (?<amount>.*)
-You earned (?<points>\d+) frequent renter points");
+        private static readonly Regex Patten = new Regex(@"Rental Record for (?<name>.*)\n(?:\t(?<title>.*)\t(?<sigleAmount>.*)\n)*Amount owed is (?<amount>.*)\nYou earned (?<points>\d+) frequent renter points");
         [Theory]
         [InlineData("Spider Man", Movie.REGULAR, 2, "2", "1")]
         [InlineData("Spider Man", Movie.REGULAR, 4, "5", "1")]
